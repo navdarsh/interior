@@ -1,0 +1,41 @@
+<div
+  fxLayout
+  fxLayoutAlign="space-between center"
+  fxLayout.xs="column"
+  class="nameContainer"
+>
+  <div fxFlex>
+    <img
+      width="100"
+      height="100"
+      style="float: right"
+      class="profile"
+      src="../../../assets/profile.jpg"
+    />
+  </div>
+  <div fxFlex class="nameAnimate">Rahul Khandelwal</div>
+  <div fxFlex fxFlexAlign="end"><p style="float: right">@Copyright</p></div>
+</div>
+
+<div
+  fxLayout
+  fxLayoutAlign="space-around center"
+  fxLayout.xs="column"
+  class="workContainer"
+>
+  <div fxflex>
+    <div>
+      <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="wrapper">
+            <img [src]="image" width="800" height="500">
+          </div>
+          <!-- <div class="carousel-caption">
+            <h3>First Slide</h3>
+            <p> Angular 10 Carousel Example </p>
+          </div> -->
+        </ng-template>
+      </ngb-carousel>
+      </div>
+  </div>
+</div>
